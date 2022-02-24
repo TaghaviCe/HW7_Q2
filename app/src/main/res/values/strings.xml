@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HW7_Q2</string>
+    <string name="q1">Is Tehran the capital of Iran?</string>
+    <string name="q2">"Is Berlin the German capital?"</string>
+    <string name="q3">Is the capital of Afghanistan Juba?</string>
+    <string name="q4">Is the capital of Tajikistan Dushanbe?</string>
+</resources>
