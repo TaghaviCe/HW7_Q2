@@ -7,6 +7,8 @@ import android.widget.Toast
 import com.example.hw7_q2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    var trueAnswer=0
+    var falseAnswer=0
     lateinit var binding: ActivityMainBinding
     val mQuestionBank: Array<Answer> = arrayOf<Answer>(
         Answer(R.string.q1, true),
@@ -28,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         binding= ActivityMainBinding.inflate(layoutInflater)
         val view= binding.root
         setContentView(view)
-
+        updateQuestion()
         binding.buttonCheat.setOnClickListener {
             getInit()
         }
@@ -39,13 +41,15 @@ class MainActivity : AppCompatActivity() {
 
         }
         binding.buttonprev.setOnClickListener {
-            index=(index-1)%mQuestionBank.size
-                 cheat=false
-                updateQuestion()
-
+            index = (index - 1) % mQuestionBank.size
+            cheat = false
+            updateQuestion()
         }
         binding.buttonTrue.setOnClickListener {
             checkA(true)
+        }
+        binding.buttonFalse.setOnClickListener {
+            checkA(false)
         }
 
     }
@@ -54,9 +58,11 @@ class MainActivity : AppCompatActivity() {
         val c=mQuestionBank[index].isTrueQuestion()
         val id=0
         if(b==mQuestionBank[index].isTrueQuestion()) {
-            Toast.makeText(this, "true", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "correct!", Toast.LENGTH_LONG).show()
+            trueAnswer++
         } else{
-            Toast.makeText(this,"false", Toast.LENGTH_LONG).show()
+            Toast.makeText(this,"wrong!", Toast.LENGTH_LONG).show()
+            falseAnswer++
         }
 
 

@@ -6,6 +6,7 @@ import android.view.View
 import com.example.hw7_q2.databinding.ActivityMain2Binding
 
 class MainActivity2 : AppCompatActivity() {
+
     val mQuestionBank: Array<Answer> = arrayOf<Answer>(
         Answer(R.string.q1, true),
         Answer(R.string.q2, true),
