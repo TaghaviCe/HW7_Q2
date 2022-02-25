@@ -12,7 +12,13 @@ class MainActivity : AppCompatActivity() {
         Answer(R.string.q1, true),
         Answer(R.string.q2, true),
         Answer(R.string.q3, false),
-        Answer(R.string.q4, true)
+        Answer(R.string.q4, true),
+        Answer(R.string.q5,true),
+        Answer(R.string.q6,false),
+        Answer(R.string.q7,false),
+        Answer(R.string.q8,true),
+        Answer(R.string.q9,true),
+        Answer(R.string.q10,false)
     )
     var index=0
     var cheat=true
